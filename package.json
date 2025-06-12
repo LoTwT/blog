@@ -1,0 +1,43 @@
+{
+  "name": "blog",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prepare": "simple-git-hooks",
+    "up": "taze latest -I -f",
+    "prettier": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "vue": "^3.5.16",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@ayingott/eslint-config": "^2.0.5",
+    "@ayingott/prettier-config": "^2.1.5",
+    "@unocss/nuxt": "^66.2.0",
+    "eslint": "^9.28.0",
+    "lint-staged": "^16.1.0",
+    "nuxt": "latest",
+    "prettier": "^3.5.3",
+    "simple-git-hooks": "^2.13.0",
+    "taze": "^19.1.0",
+    "unocss": "^66.2.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "prettier": "@ayingott/prettier-config"
+}
