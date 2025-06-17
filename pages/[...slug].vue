@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { Collections } from "@nuxt/content"
-
 const route = useRoute()
-const category = route.params.category as keyof Collections
 const slug = route.params.slug
 
-const { data: post } = await useAsyncData(`${category}-${slug}`, () => {
-  return queryCollection(category).path(`/${category}/${slug}`).first()
+const normalizedSlugArray = Array.isArray(slug) ? slug : [slug]
+const normalizedPath = normalizedSlugArray.join("/")
+
+const { data: post } = await useAsyncData(() => {
+  return queryCollection("content").path(`/${normalizedPath}`).first()
 })
 </script>
 

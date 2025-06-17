@@ -12,7 +12,8 @@
     "prepare": "simple-git-hooks",
     "up": "taze latest -I -f",
     "prettier": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "reset:data": "rm -rf .data/content/contents.sqlite && nuxt cleanup"
   },
   "dependencies": {
     "@nuxt/content": "^3.6.0",
