@@ -2,12 +2,13 @@
   "name": "blog",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.12.3",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "nuxt": "nuxt",
     "postinstall": "nuxt prepare",
     "prepare": "simple-git-hooks",
     "up": "taze latest -I -f",
@@ -16,22 +17,22 @@
     "reset:data": "rm -rf .data/content/contents.sqlite && nuxt cleanup"
   },
   "dependencies": {
-    "@nuxt/content": "^3.6.0",
-    "better-sqlite3": "^11.10.0",
-    "vue": "^3.5.16",
+    "@nuxt/content": "^3.6.1",
+    "better-sqlite3": "^12.1.0",
+    "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@ayingott/eslint-config": "^2.0.5",
     "@ayingott/prettier-config": "^2.1.5",
-    "@unocss/nuxt": "^66.2.0",
-    "eslint": "^9.28.0",
-    "lint-staged": "^16.1.0",
+    "@unocss/nuxt": "^66.2.3",
+    "eslint": "^9.29.0",
+    "lint-staged": "^16.1.2",
     "nuxt": "latest",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.0",
     "simple-git-hooks": "^2.13.0",
     "taze": "^19.1.0",
-    "unocss": "^66.2.0"
+    "unocss": "^66.2.3"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged"
