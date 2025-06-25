@@ -29,10 +29,10 @@
     "eslint": "^9.29.0",
     "lint-staged": "^16.1.2",
     "nuxt": "latest",
-    "prettier": "^3.6.0",
+    "prettier": "^3.6.1",
     "simple-git-hooks": "^2.13.0",
     "taze": "^19.1.0",
-    "unocss": "^66.2.3"
+    "unocss": "^66.3.1"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged"
