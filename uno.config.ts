@@ -8,6 +8,14 @@ import {
 } from "unocss"
 
 export default defineConfig({
+  rules: [
+    ["skip-ink-none", { "text-decoration-skip-ink": "none" }],
+    ["skip-ink-auto", { "text-decoration-skip-ink": "auto" }],
+  ],
+  shortcuts: {
+    link: "relative after:block after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:w-0.5 after:h-0.5 after:bg-blue-300 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 after:rounded-full",
+  },
+
   presets: [
     presetWind4({
       preflights: {

@@ -1,0 +1,9 @@
+html,
+body,
+#__nuxt {
+  @apply h-full w-full;
+}
+
+#__nuxt {
+  @apply flex flex-col;
+}

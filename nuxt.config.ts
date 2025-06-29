@@ -4,6 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@unocss/nuxt", "@nuxt/content"],
 
+  css: ["@/assets/styles/main.css"],
+
   content: {
     build: {
       markdown: {
