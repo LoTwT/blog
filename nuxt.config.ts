@@ -1,6 +1,10 @@
+import process from "node:process"
+
+const isDevelopment = process.env.NODE_ENV === "development"
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2025-05-15",
+  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: ["@unocss/nuxt", "@nuxt/content"],
 
@@ -17,7 +21,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: "cloudflare-module",
+    preset: isDevelopment ? "cloudflare-dev" : "cloudflare-module",
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,

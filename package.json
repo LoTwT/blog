@@ -2,7 +2,7 @@
   "name": "blog",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.12.3",
+  "packageManager": "pnpm@10.13.1",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -17,23 +17,25 @@
     "reset:data": "rm -rf .data/content/contents.sqlite && nuxt cleanup"
   },
   "dependencies": {
-    "@nuxt/content": "^3.6.1",
-    "better-sqlite3": "^12.1.0",
+    "@nuxt/content": "^3.6.3",
+    "better-sqlite3": "^12.2.0",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@ayingott/eslint-config": "^2.0.5",
     "@ayingott/prettier-config": "^2.1.5",
-    "@iconify-json/lucide": "^1.2.53",
-    "@unocss/nuxt": "^66.2.3",
-    "eslint": "^9.29.0",
+    "@iconify-json/lucide": "^1.2.57",
+    "@types/node": "^24.0.15",
+    "@unocss/nuxt": "^66.3.3",
+    "eslint": "^9.31.0",
     "lint-staged": "^16.1.2",
     "nuxt": "latest",
-    "prettier": "^3.6.1",
+    "prettier": "^3.6.2",
     "simple-git-hooks": "^2.13.0",
     "taze": "^19.1.0",
-    "unocss": "^66.3.1"
+    "unocss": "^66.3.3",
+    "wrangler": "^4.25.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged"
