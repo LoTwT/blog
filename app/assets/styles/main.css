@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss" theme(static);
 @import "./utilities.css";
 @import "@nuxt/ui";
 
@@ -18,7 +18,11 @@
 }
 
 @layer components {
+  button:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
   .link {
-    @apply relative after:absolute after:-bottom-0.5 after:left-0 after:block after:h-0.5 after:w-0.5 after:rounded-full after:bg-blue-300 after:transition-all after:duration-300 after:content-[''] hover:after:left-0 hover:after:w-full;
+    @apply after:bg-primary relative after:absolute after:-bottom-0.5 after:left-0 after:block after:h-0.5 after:w-0.5 after:rounded-full after:transition-all after:duration-300 after:content-[''] hover:after:left-0 hover:after:w-full;
   }
 }
