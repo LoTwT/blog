@@ -1,9 +1,24 @@
-html,
-body,
-#__nuxt {
-  @apply h-full w-full;
+@import "tailwindcss";
+@import "./utilities.css";
+@import "@nuxt/ui";
+
+@theme {
 }
 
-#__nuxt {
-  @apply flex flex-col;
+@layer base {
+  html,
+  body,
+  #__nuxt {
+    @apply h-full w-full;
+  }
+
+  #__nuxt {
+    @apply flex flex-col;
+  }
+}
+
+@layer components {
+  .link {
+    @apply relative after:absolute after:-bottom-0.5 after:left-0 after:block after:h-0.5 after:w-0.5 after:rounded-full after:bg-blue-300 after:transition-all after:duration-300 after:content-[''] hover:after:left-0 hover:after:w-full;
+  }
 }

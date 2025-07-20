@@ -6,7 +6,7 @@ const isDevelopment = process.env.NODE_ENV === "development"
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@unocss/nuxt", "@nuxt/content"],
+  modules: ["@nuxt/ui", "@nuxt/content"],
 
   css: ["@/assets/styles/main.css"],
 
@@ -18,6 +18,10 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  ui: {
+    fonts: false,
   },
 
   nitro: {

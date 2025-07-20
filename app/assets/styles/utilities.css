@@ -1,0 +1,7 @@
+@utility skip-ink-none {
+  text-decoration-skip-ink: none;
+}
+
+@utility skip-ink-auto {
+  text-decoration-skip-ink: auto;
+}
